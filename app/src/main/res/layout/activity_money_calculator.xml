@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A12"
+    tools:context=".MoneyCalculator">
+
+    <TextView
+        android:id="@+id/payNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:textColor="#FFF"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sendingCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sending Country"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payNow" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/sendingCountryEdit"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/edit_text"
+        android:hint="Ex:United State of America"
+        android:paddingLeft="15dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8A8686"
+        app:layout_constraintStart_toStartOf="@id/sendingCountry"
+        app:layout_constraintTop_toBottomOf="@id/sendingCountry" />
+
+    <TextView
+        android:id="@+id/receivingCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Receiving Country"
+        android:textColor="#FFF"
+        app:layout_constraintStart_toStartOf="@id/sendingCountryEdit"
+        app:layout_constraintTop_toBottomOf="@id/sendingCountryEdit" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/receivingCountryEdit"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/edit_text"
+        android:hint="Ex:United Kingdom"
+        android:paddingLeft="15dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8A8686"
+        app:layout_constraintStart_toStartOf="@id/receivingCountry"
+        app:layout_constraintTop_toBottomOf="@id/receivingCountry" />
+
+    <TextView
+        android:id="@+id/amountSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Amount To Send"
+        android:textColor="#FFF"
+        app:layout_constraintStart_toStartOf="@id/receivingCountryEdit"
+        app:layout_constraintTop_toBottomOf="@id/receivingCountryEdit" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/amountSendEdit"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/edit_text"
+        android:hint="Ex:10 USD"
+        android:paddingLeft="15dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8A8686"
+        app:layout_constraintStart_toStartOf="@id/amountSend"
+        app:layout_constraintTop_toBottomOf="@id/amountSend" />
+
+    <TextView
+        android:id="@+id/amountReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Amount To Receive"
+        android:textColor="#FFF"
+        app:layout_constraintStart_toStartOf="@id/amountSendEdit"
+        app:layout_constraintTop_toBottomOf="@id/amountSendEdit" />
+
+    <EditText
+        android:id="@+id/amountReceiveEdit"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/edit_text"
+        android:hint="Ex:800GBP"
+        android:paddingLeft="15dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8A8686"
+        app:layout_constraintStart_toStartOf="@id/amountReceive"
+        app:layout_constraintTop_toBottomOf="@id/amountReceive" />
+
+    <TextView
+        android:id="@+id/purpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Purpose"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/amountReceiveEdit"
+        app:layout_constraintTop_toBottomOf="@id/amountReceiveEdit" />
+
+    <Spinner
+        android:id="@+id/purpose_list"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:background="@drawable/purpose_bg"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@id/purpose"
+        app:layout_constraintTop_toBottomOf="@id/purpose" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/signup_btn"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Save Receord"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/purpose_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

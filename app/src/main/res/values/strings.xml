@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tayseer</string>
+    <string name="checkrate">Check Rate</string>
+    
+    <string-array name="purposes">
+        <item>Study</item>
+        <item>Business</item>
+        <item>Travel</item>
+    </string-array>
+
+</resources>
